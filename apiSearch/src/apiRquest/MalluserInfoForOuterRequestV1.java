@@ -24,6 +24,9 @@ public class MalluserInfoForOuterRequestV1 extends AbstractIcbcRequest {
 		private String remark;//备用字段	
 		private String refundAmt;//退款金额	
 		private String key;//用户信息key值	
+		private String refundUrl;//退款完成后返回第三方的url
+		private String thirdRrefundId;//被三方退款单号	
+		private String outuserId;//外应用用户编码：查询用户信息时的外应用用户ID  
 
 		private String msg_id        ;//用于确定一笔签名的唯一性,不能重复
 		private String return_code   ;//0-成功；负-疑帐；正-失败；
@@ -214,6 +217,30 @@ public class MalluserInfoForOuterRequestV1 extends AbstractIcbcRequest {
 
 		public void setPay_time(String pay_time) {
 			Pay_time = pay_time;
+		}
+
+		public String getRefundUrl() {
+			return refundUrl;
+		}
+
+		public void setRefundUrl(String refundUrl) {
+			this.refundUrl = refundUrl;
+		}
+
+		public String getThirdRrefundId() {
+			return thirdRrefundId;
+		}
+
+		public void setThirdRrefundId(String thirdRrefundId) {
+			this.thirdRrefundId = thirdRrefundId;
+		}
+
+		public String getOutuserId() {
+			return outuserId;
+		}
+
+		public void setOutuserId(String outuserId) {
+			this.outuserId = outuserId;
 		}
 
 	
