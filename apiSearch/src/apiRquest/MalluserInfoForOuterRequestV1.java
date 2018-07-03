@@ -41,7 +41,11 @@ public class MalluserInfoForOuterRequestV1 extends AbstractIcbcRequest {
 		private String pay_status   ;//支付状态 0支付成功1支付失败
 		private String Order_id   ;//融e购订单号
 		private String Pay_time   ;//支付时间
-
+		private String temp1;
+		
+		private String temp2;
+		
+		private String temp3;
 		
 		public String getAppId() {
 			return appId;
@@ -243,6 +247,30 @@ public class MalluserInfoForOuterRequestV1 extends AbstractIcbcRequest {
 			this.outuserId = outuserId;
 		}
 
+		public String getTemp1() {
+			return temp1;
+		}
+
+		public void setTemp1(String temp1) {
+			this.temp1 = temp1;
+		}
+
+		public String getTemp2() {
+			return temp2;
+		}
+
+		public void setTemp2(String temp2) {
+			this.temp2 = temp2;
+		}
+
+		public String getTemp3() {
+			return temp3;
+		}
+
+		public void setTemp3(String temp3) {
+			this.temp3 = temp3;
+		}
+
 	
 	}
 
@@ -250,6 +278,7 @@ public class MalluserInfoForOuterRequestV1 extends AbstractIcbcRequest {
 	public Class getResponseClass() {
 		return MalluserInfoForOuterResponseV1Biz.class;
 	}
+	
 
 	@Override
 	public boolean isNeedEncrypt() {
