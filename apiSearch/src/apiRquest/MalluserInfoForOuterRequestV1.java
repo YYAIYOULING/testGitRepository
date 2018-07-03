@@ -245,7 +245,7 @@ public class MalluserInfoForOuterRequestV1 extends AbstractIcbcRequest {
 
 		public void setOutuserId(String outuserId) {
 			this.outuserId = outuserId;
-		}
+		}    
  
 		public String getTemp1() {
 			return temp1;
