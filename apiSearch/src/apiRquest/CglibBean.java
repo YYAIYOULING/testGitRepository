@@ -8,6 +8,7 @@ import org.springframework.cglib.beans.BeanMap;
 import com.icbc.api.BizContent;
 
 public class CglibBean implements BizContent{
+    //测试文件。。。。。。。。
     /**
      * 实体Object
      */
