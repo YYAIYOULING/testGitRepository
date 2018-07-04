@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.ui.theme" value="simple" />
+    <package name="default" namespace="/" extends="struts-default">
+    	<!-- 拦截器返回的页面需要通过配置公共结果集完成 -->
+		<global-results>
+			<result name="error">/WEB-INF/jsps/error.jsp</result>
+		</global-results>	
+		<!-- 通用 -->
+    	<action name="pages_*">
+    		<result>/{1}.jsp</result>
+    	</action>
+    	<!-- class需要使用spring的伪类名 -->
+    	<action name="api_*" class="apiAction" method="{1}">
+    		<result name="loginSuccess">/WEB-INF/jsps/login.jsp</result>
+    		<result name="loginIcbcSuccess">/WEB-INF/jsps/context.jsp</result>
+    	</action>
+    </package>
+</struts>
